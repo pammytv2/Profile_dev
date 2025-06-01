@@ -662,3 +662,39 @@
           font-size: 40px;
         }
       }
+
+/* ==== Mobile Responsive Enhancements ==== */
+@media (max-width: 768px) {
+  .navbar .nav-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .hero-content {
+    padding: 1rem;
+    text-align: center;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+  .skills-grid, .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .project-card {
+    width: 100%;
+  }
+  input, textarea, button {
+    width: 100% !important;
+    font-size: 1rem;
+  }
+}
