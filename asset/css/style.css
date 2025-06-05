@@ -637,6 +637,26 @@
         transform: translateY(0);
       }
 
+      /* Moving Robot */
+      .moving-robot {
+        position: fixed;
+        bottom: 1rem;
+        left: 0;
+        font-size: 3rem;
+        animation: robotMove 6s linear infinite alternate;
+        pointer-events: none;
+        z-index: -6;
+      }
+
+      @keyframes robotMove {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(100vw - 3rem));
+        }
+      }
+
 
 /* ==== Mobile Responsive Enhancements ==== */
 @media (max-width: 768px) {
