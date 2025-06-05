@@ -6,7 +6,7 @@
       }
 
       body {
-        font-family: "Monaco", "Courier New", monospace;
+        font-family: "Poppins", "Monaco", "Courier New", monospace;
         background: #000;
         color: #fff;
         overflow-x: hidden;
@@ -20,7 +20,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: #000;
+        background: linear-gradient(180deg, #0d1b2a, #000);
         z-index: -10;
       }
 
@@ -324,8 +324,10 @@
         font-size: 3rem;
         font-weight: bold;
         margin-bottom: 1rem;
-        white-space: nowrap; 
-        color: #fff;
+        white-space: nowrap;
+        background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
         animation: heroGlow 3s ease-in-out infinite alternate;
       }
