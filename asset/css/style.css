@@ -704,14 +704,4 @@
     font-size: 1rem;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  .menu-bar {
-    padding: 0.75rem 1rem;
-  }
-  .nav-links {
-    gap: 1.5rem;
-  }
-  .logo {
-    font-size: 1.25rem;
-  }
-}
+
