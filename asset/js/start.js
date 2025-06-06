@@ -1,11 +1,16 @@
- document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          // ป้องกันคลาสค้าง
-          link.classList.remove("animate-click");
-          void link.offsetWidth; // รีเซ็ต animation
-          link.classList.add("animate-click");
-        });
-      });
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    // ป้องกันคลาสค้าง
+    link.classList.remove("animate-click");
+    void link.offsetWidth; // รีเซ็ต animation
+    link.classList.add("animate-click");
+    // ปิดเมนูเมื่อคลิกบนมือถือเพื่อไม่ให้บังเนื้อหา
+    const menuToggle = document.getElementById("menu-toggle");
+    if (menuToggle) {
+      menuToggle.checked = false;
+    }
+  });
+});
       // Create twinkling stars
       // สร้างดาวกระพริบแบบสุ่ม
       function createStars() {
@@ -89,6 +94,7 @@
           }, 2000); // กำหนดให้อยู่แค่ 2 วินาที
         }, 4000); // สร้างใหม่ทุก 4 วินาที
       }
+      
 
       // เรียกใช้งานเมื่อโหลดหน้าเว็บ
       window.addEventListener("DOMContentLoaded", () => {
