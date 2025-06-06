@@ -1,11 +1,21 @@
- document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          // ป้องกันคลาสค้าง
-          link.classList.remove("animate-click");
-          void link.offsetWidth; // รีเซ็ต animation
-          link.classList.add("animate-click");
-        });
-      });
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+    // ป้องกันคลาสค้างสำหรับ animation
+    link.classList.remove("animate-click");
+    void link.offsetWidth; // รีเซ็ต animation
+    link.classList.add("animate-click");
+  });
+});
       // Create twinkling stars
       // สร้างดาวกระพริบแบบสุ่ม
       function createStars() {
