@@ -1,0 +1,38 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2050, "title": "A — Mission Control" },
+    { "file": "DirectionB.dc.html", "x": 1320, "y": 0, "w": 1200, "h": 2000, "title": "B — Editorial" },
+    { "file": "DirectionC.dc.html", "x": 2640, "y": 0, "w": 1200, "h": 1300, "title": "C — Terminal" }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -760,
+      "w": 560,
+      "text": "Three directions for the portfolio overhaul — pick one and I'll build it out properly (desktop + mobile + working filters).\n\nAll three show the same two things so they're comparable: the hero with the one-year positioning, and four work entries.\n\nEverything in [BRACKETS] is a real fact I don't have yet — your company, your work projects, the project count. The two university projects are real."
+    },
+    {
+      "id": "note-a",
+      "x": 0,
+      "y": -300,
+      "w": 560,
+      "text": "A — MISSION CONTROL\n\nWhy: keeps the space identity you already have, but disciplines it. Near-black instead of pure black, a faint technical grid instead of animated rockets, monospace data labels, a telemetry strip. Familiar, but it stops looking like a student site.\n\nTradeoff: it's still a themed site. Some recruiters read \"space\" as a gimmick no matter how well it's done."
+    },
+    {
+      "id": "note-b",
+      "x": 1320,
+      "y": -300,
+      "w": 560,
+      "text": "B — EDITORIAL\n\nWhy: warm paper, serif headlines, projects as big numbered entries with room to actually explain them. Reads calm and senior — this is what a portfolio looks like when the work speaks for itself.\n\nTradeoff: throws the current identity away completely. A light theme is the biggest possible break from the site you have now."
+    },
+    {
+      "id": "note-c",
+      "x": 2640,
+      "y": -300,
+      "w": 560,
+      "text": "C — TERMINAL\n\nWhy: monospace-first, IDE chrome, work as a sortable file listing. Dense and confident — signals \"I write code\" before you read a single word.\n\nTradeoff: speaks fluently to engineers, less so to HR screeners and non-technical recruiters, who are often the first people to open your link."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

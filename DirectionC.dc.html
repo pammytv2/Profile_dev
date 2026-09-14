@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #0e1116; }
+    a { color: #c9d4e2; text-decoration: none; }
+    a:hover { color: oklch(0.80 0.16 145); }
+    .tm-row { transition: all 0.3s ease; }
+    .tm-row:hover { background: #1b2229; border-left-color: oklch(0.80 0.16 145); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; background: #0e1116; color: #c9d4e2; font-family: 'JetBrains Mono', ui-monospace, monospace">
+
+  <div style="display: flex; align-items: center; gap: 24px; padding: 0 18px; height: 42px; background: #090c10; border-bottom: 1px solid #1e252e">
+    <div style="display: flex; gap: 7px">
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
+    </div>
+    <div style="display: flex; align-items: stretch; height: 42px">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 0 18px; background: #0e1116; border-right: 1px solid #1e252e; border-top: 2px solid oklch(0.80 0.16 145); font-size: 12px">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="oklch(0.80 0.16 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+        index.tsx
+      </div>
+      <div style="display: flex; align-items: center; padding: 0 18px; border-right: 1px solid #1e252e; font-size: 12px; color: #5d6b7c">work.json</div>
+      <div style="display: flex; align-items: center; padding: 0 18px; border-right: 1px solid #1e252e; font-size: 12px; color: #5d6b7c">about.md</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 56px 1fr">
+
+    <div style="background: #090c10; border-right: 1px solid #1e252e; padding: 40px 0; text-align: right; font-size: 12px; line-height: 2.1; color: #333d49">
+      <div style="padding-right: 14px">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40</div>
+    </div>
+
+    <div style="padding: 40px 48px 0">
+      <div style="font-size: 13px; color: #4d5a68; margin-bottom: 22px">// experience.years = 1</div>
+
+      <h1 style="margin: 0 0 24px; font-size: 58px; line-height: 1.12; font-weight: 700; letter-spacing: -0.03em; color: #eaf0f7; max-width: 860px">
+        <span style="color: oklch(0.80 0.16 145)">const</span> engineer = <span style="color: #e0a45c">&quot;shipping&nbsp;for&nbsp;a&nbsp;year&quot;</span>;
+      </h1>
+      <p style="margin: 0 0 36px; max-width: 640px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.7; color: #8797a8">Natchaphon Thanakaew. Full-stack — Node, C#, Flutter. Twelve months writing production code at <span style="color: oklch(0.80 0.16 145)">[COMPANY]</span>, after a Computer Engineering degree at RMUTL.</p>
+
+      <div style="display: flex; gap: 12px; margin-bottom: 64px">
+        <a href="#" style="display: flex; align-items: center; gap: 9px; padding: 13px 22px; background: oklch(0.80 0.16 145); color: #0e1116; font-size: 13px; font-weight: 500; border-radius: 4px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"></path></svg>
+          run work.list()
+        </a>
+        <a href="#" style="padding: 13px 22px; border: 1px solid #2a3542; font-size: 13px; border-radius: 4px; color: #8797a8">./resume.pdf</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #1e252e; border-radius: 6px; overflow: hidden; margin-bottom: 72px">
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">years_shipping</div>
+          <div style="font-size: 24px; color: oklch(0.80 0.16 145); font-weight: 500">1</div>
+        </div>
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">projects.length</div>
+          <div style="font-size: 24px; color: oklch(0.80 0.16 145); font-weight: 500">[N]</div>
+        </div>
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">languages</div>
+          <div style="font-size: 24px; color: oklch(0.80 0.16 145); font-weight: 500">8</div>
+        </div>
+        <div style="padding: 20px 22px">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">location</div>
+          <div style="font-size: 24px; color: oklch(0.80 0.16 145); font-weight: 500">TH</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px">
+        <h2 style="margin: 0; font-size: 15px; font-weight: 500; color: #eaf0f7">~/work</h2>
+        <div style="display: flex; gap: 18px; font-size: 12px; color: #5d6b7c">
+          <span style="color: oklch(0.80 0.16 145)">--all</span>
+          <span>--work</span>
+          <span>--study</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 210px 130px 90px; gap: 20px; padding: 10px 16px; font-size: 11px; color: #4d5a68; border-bottom: 1px solid #1e252e">
+        <span>NAME</span><span>STACK</span><span>TYPE</span><span style="text-align: right">YEAR</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; padding-bottom: 56px">
+
+        <div class="tm-row" style="display: grid; grid-template-columns: 1fr 210px 130px 90px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24; border-left: 2px solid transparent">
+          <div>
+            <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">[PROJECT NAME]</div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">[What you built and who it was for.]</div>
+          </div>
+          <div style="font-size: 12px; color: #8797a8">[TECH], [TECH]</div>
+          <div><span style="font-size: 11px; padding: 4px 9px; border-radius: 3px; background: oklch(0.80 0.16 145 / 0.14); color: oklch(0.80 0.16 145)">work</span></div>
+          <div style="font-size: 12px; color: #5d6b7c; text-align: right">[YEAR]</div>
+        </div>
+
+        <div class="tm-row" style="display: grid; grid-template-columns: 1fr 210px 130px 90px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24; border-left: 2px solid transparent">
+          <div>
+            <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">[PROJECT NAME]</div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">[What you built and who it was for.]</div>
+          </div>
+          <div style="font-size: 12px; color: #8797a8">[TECH], [TECH]</div>
+          <div><span style="font-size: 11px; padding: 4px 9px; border-radius: 3px; background: oklch(0.80 0.16 145 / 0.14); color: oklch(0.80 0.16 145)">work</span></div>
+          <div style="font-size: 12px; color: #5d6b7c; text-align: right">[YEAR]</div>
+        </div>
+
+        <div class="tm-row" style="display: grid; grid-template-columns: 1fr 210px 130px 90px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24; border-left: 2px solid transparent">
+          <div>
+            <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">esports-stress-analysis</div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.</div>
+          </div>
+          <div style="font-size: 12px; color: #8797a8">Python, Flutter, Mongo</div>
+          <div><span style="font-size: 11px; padding: 4px 9px; border-radius: 3px; background: #1e252e; color: #8797a8">study</span></div>
+          <div style="font-size: 12px; color: #5d6b7c; text-align: right">[YEAR]</div>
+        </div>
+
+        <div class="tm-row" style="display: grid; grid-template-columns: 1fr 210px 130px 90px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24; border-left: 2px solid transparent">
+          <div>
+            <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">role-based-product-api</div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">Warehouse system for inbound and outbound inventory transactions with role-based access.</div>
+          </div>
+          <div style="font-size: 12px; color: #8797a8">C#, ASP.NET</div>
+          <div><span style="font-size: 11px; padding: 4px 9px; border-radius: 3px; background: #1e252e; color: #8797a8">study</span></div>
+          <div style="font-size: 12px; color: #5d6b7c; text-align: right">[YEAR]</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 18px; height: 30px; background: oklch(0.80 0.16 145); color: #0e1116; font-size: 11px; font-weight: 500">
+    <span>main*  &nbsp;·&nbsp;  natchaphon.dev</span>
+    <span>Ln 1, Col 1  &nbsp;·&nbsp;  UTF-8</span>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
