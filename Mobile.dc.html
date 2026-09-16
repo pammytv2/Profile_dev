@@ -78,7 +78,9 @@
 
       <div style="display: flex; flex-direction: column; gap: 12px">
         <sc-for list="{{items}}" as="item" hint-placeholder-count="3">
-          <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 18px">
+          <div style="border: 1px solid #1e252e; border-radius: 6px; overflow: hidden">
+            <img src="{{item.img}}" alt="{{item.alt}}" style="width: 100%; height: 160px; object-fit: cover; display: block; border-bottom: 1px solid #1e252e" />
+            <div style="padding: 18px">
             <div style="font-size: 14px; color: #eaf0f7; margin-bottom: 10px">{{item.name}}</div>
             <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; color: #6b7a8d; line-height: 1.6; margin-bottom: 14px">{{item.desc}}</div>
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
@@ -86,6 +88,7 @@
               <a href="{{item.href}}" style="display: flex; align-items: center; gap: 6px; height: 44px; padding: 0 4px; font-size: 12px; color: {{accent}}">{{item.link}}
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
               </a>
+            </div>
             </div>
           </div>
         </sc-for>
@@ -96,19 +99,19 @@
       <div style="font-size: 12px; color: #4d5a68; margin-bottom: 14px">// stack.yml</div>
       <div style="display: flex; flex-direction: column; gap: 10px">
         <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
-          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">languages:</div>
+          <div style="display: flex; align-items: center; gap: 9px; font-size: 12px; color: {{accent}}; margin-bottom: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"></path></svg>languages:</div>
           <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">HTML5, CSS3, JavaScript, PHP, C#, C++, Python, Dart</div>
         </div>
         <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
-          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">frameworks:</div>
+          <div style="display: flex; align-items: center; gap: 9px; font-size: 12px; color: {{accent}}; margin-bottom: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="m12 2 9 5-9 5-9-5 9-5z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg>frameworks:</div>
           <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">Node.js, Express.js, Flutter, ASP.NET</div>
         </div>
         <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
-          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">databases:</div>
+          <div style="display: flex; align-items: center; gap: 9px; font-size: 12px; color: {{accent}}; margin-bottom: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"></path></svg>databases:</div>
           <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">MongoDB, PostgreSQL</div>
         </div>
         <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
-          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">tools:</div>
+          <div style="display: flex; align-items: center; gap: 9px; font-size: 12px; color: {{accent}}; margin-bottom: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.1 2.1 0 0 1-3-3l9.4-9.4z"></path><path d="M14.7 6.3 17.5 3.5a2 2 0 0 1 3 3l-2.8 2.8"></path></svg>tools:</div>
           <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">Docker, Git, Postman, Unity</div>
         </div>
       </div>
@@ -124,9 +127,9 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
             github.com/pammytv2
           </a>
-          <a href="[YOUR LINKEDIN URL]" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+          <a href="https://www.linkedin.com/in/natchaphon-thanakaew-95921b355/" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            [YOUR LINKEDIN]
+            linkedin
           </a>
           <a href="mailto:Natchaphon11th@gmail.com" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
@@ -148,9 +151,9 @@
 class Component extends DCLogic {
   data() {
     return [
-      { name: 'esports-stress-analysis', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Mongo', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
-      { name: 'role-based-product-api', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
-      { name: 'game-driving-simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
+      { name: 'esports-stress-analysis', img: '2.png', alt: 'Screenshot of the e-sports stress analysis dashboard', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Mongo', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
+      { name: 'role-based-product-api', img: '3.png', alt: 'Screenshot of the inventory management system', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
+      { name: 'game-driving-simulator', img: '1.png', alt: 'Screenshot of the VR driving simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
     ];
   }
 
