@@ -9,142 +9,241 @@
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; background: #060607; }
-    a { color: #e8eaed; text-decoration: none; }
-    a:hover { color: oklch(0.82 0.12 199); }
-    .mc-card { transition: all 0.3s ease; }
-    .mc-card:hover { transform: translateY(-10px); border-color: oklch(0.82 0.12 199 / 0.5); }
+    body { margin: 0; background: #0e1116; }
+    a { color: #c9d4e2; text-decoration: none; }
+    a:hover { color: #eaf0f7; }
+    .tm-row { transition: all 0.3s ease; }
+    .tm-row:hover { background: #1b2229; }
+    .tm-chip { cursor: pointer; transition: all 0.3s ease; }
+    .tm-skill { transition: all 0.3s ease; }
+    .tm-skill:hover { background: #1b2229; border-color: #2a3542; }
+    .tm-social { transition: all 0.3s ease; }
+    .tm-social:hover { background: #1b2229; border-color: #2a3542; }
   </style>
 </helmet>
 
-<div style="width: 1200px; background: #060607; color: #e8eaed; font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif; position: relative; overflow: hidden">
+<div style="width: 1200px; background: #0e1116; color: #c9d4e2; font-family: 'JetBrains Mono', ui-monospace, monospace">
 
-  <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(232,234,237,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(232,234,237,0.035) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none"></div>
-  <div style="position: absolute; top: -220px; left: 50%; width: 900px; height: 620px; transform: translateX(-50%); background: radial-gradient(ellipse at center, oklch(0.62 0.10 199 / 0.20), transparent 68%); pointer-events: none"></div>
-
-  <div style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 22px 56px; border-bottom: 1px solid rgba(232,234,237,0.08)">
-    <div style="display: flex; align-items: center; gap: 11px">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="oklch(0.82 0.12 199)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a14 14 0 0 0 0 18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M3.3 9h17.4M3.3 15h17.4"></path></svg>
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em">NATCHAPHON.DEV</span>
+  <div style="display: flex; align-items: center; gap: 24px; padding: 0 18px; height: 42px; background: #090c10; border-bottom: 1px solid #1e252e">
+    <div style="display: flex; gap: 7px">
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
+      <span style="width: 11px; height: 11px; border-radius: 50%; background: #3a4450"></span>
     </div>
-    <div style="display: flex; align-items: center; gap: 30px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: rgba(232,234,237,0.6)">
-      <a href="#">WORK</a>
-      <a href="#">ABOUT</a>
-      <a href="#">STACK</a>
-      <a href="#" style="color: #060607; background: oklch(0.82 0.12 199); padding: 9px 16px; border-radius: 3px; font-weight: 500">CONTACT</a>
-    </div>
-  </div>
-
-  <div style="position: relative; padding: 104px 56px 0">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
-      <span style="width: 7px; height: 7px; border-radius: 50%; background: oklch(0.82 0.12 199); box-shadow: 0 0 12px oklch(0.82 0.12 199)"></span>
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: oklch(0.82 0.12 199)">STATUS — ONE YEAR IN ORBIT</span>
-    </div>
-    <h1 style="margin: 0 0 22px; font-size: 76px; line-height: 1.02; font-weight: 700; letter-spacing: -0.03em; max-width: 880px; text-wrap: pretty">Full-stack engineer, one year past launch.</h1>
-    <p style="margin: 0 0 40px; max-width: 620px; font-size: 18px; line-height: 1.65; color: rgba(232,234,237,0.62)">Natchaphon Thanakaew — building and shipping production web and mobile software at <span style="color: #e8eaed; border-bottom: 1px dashed oklch(0.82 0.12 199)">[COMPANY]</span> since 2025.</p>
-    <div style="display: flex; gap: 14px; margin-bottom: 84px">
-      <a href="#" style="display: flex; align-items: center; gap: 9px; padding: 15px 26px; border-radius: 3px; background: oklch(0.82 0.12 199); color: #060607; font-size: 14px; font-weight: 500">View the work<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-      <a href="#" style="padding: 15px 26px; border-radius: 3px; border: 1px solid rgba(232,234,237,0.2); font-size: 14px">Download CV</a>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: rgba(232,234,237,0.1); border: 1px solid rgba(232,234,237,0.1); margin-bottom: 104px">
-      <div style="background: #060607; padding: 26px 24px">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: rgba(232,234,237,0.42); margin-bottom: 10px">EXPERIENCE</div>
-        <div style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">1 year</div>
+    <div style="display: flex; align-items: stretch; height: 42px">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 0 18px; background: #0e1116; border-right: 1px solid #1e252e; border-top: 2px solid {{accent}}; font-size: 12px">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+        index.tsx
       </div>
-      <div style="background: #060607; padding: 26px 24px">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: rgba(232,234,237,0.42); margin-bottom: 10px">SHIPPED</div>
-        <div style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">[N] projects</div>
-      </div>
-      <div style="background: #060607; padding: 26px 24px">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: rgba(232,234,237,0.42); margin-bottom: 10px">CORE STACK</div>
-        <div style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">Node · C#</div>
-      </div>
-      <div style="background: #060607; padding: 26px 24px">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: rgba(232,234,237,0.42); margin-bottom: 10px">BASE</div>
-        <div style="font-size: 30px; font-weight: 500; letter-spacing: -0.02em">Chiang Mai</div>
-      </div>
+      <a href="#work" style="display: flex; align-items: center; padding: 0 18px; border-right: 1px solid #1e252e; font-size: 12px; color: #5d6b7c">work.json</a>
+      <a href="#about" style="display: flex; align-items: center; padding: 0 18px; border-right: 1px solid #1e252e; font-size: 12px; color: #5d6b7c">about.md</a>
+      <a href="#stack" style="display: flex; align-items: center; padding: 0 18px; border-right: 1px solid #1e252e; font-size: 12px; color: #5d6b7c">stack.yml</a>
     </div>
   </div>
 
-  <div style="position: relative; padding: 0 56px 104px">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 38px; border-bottom: 1px solid rgba(232,234,237,0.1); padding-bottom: 20px">
-      <h2 style="margin: 0; font-size: 34px; font-weight: 500; letter-spacing: -0.02em">Selected work</h2>
-      <div style="display: flex; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em">
-        <span style="padding: 8px 14px; border: 1px solid oklch(0.82 0.12 199 / 0.5); color: oklch(0.82 0.12 199); border-radius: 3px">ALL</span>
-        <span style="padding: 8px 14px; border: 1px solid rgba(232,234,237,0.14); color: rgba(232,234,237,0.55); border-radius: 3px">WORK</span>
-        <span style="padding: 8px 14px; border: 1px solid rgba(232,234,237,0.14); color: rgba(232,234,237,0.55); border-radius: 3px">STUDY</span>
-      </div>
+  <div style="display: grid; grid-template-columns: 56px 1fr">
+
+    <div style="position: relative; overflow: hidden; background: #090c10; border-right: 1px solid #1e252e">
+      <div style="position: absolute; top: 40px; right: 14px; text-align: right; font-size: 12px; line-height: 2.1; color: #2b3440"><sc-for list="{{lines}}" as="n" hint-placeholder-count="40"><div>{{n}}</div></sc-for></div>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+    <div style="padding: 40px 48px 0">
 
-      <div class="mc-card" style="border: 1px solid rgba(232,234,237,0.12); background: rgba(232,234,237,0.02); border-radius: 4px; overflow: hidden">
-        <div style="height: 182px; background: linear-gradient(135deg, oklch(0.42 0.08 199 / 0.5), rgba(232,234,237,0.03)); border-bottom: 1px solid rgba(232,234,237,0.1)"></div>
-        <div style="padding: 24px">
-          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: rgba(232,234,237,0.42); margin-bottom: 14px">
-            <span style="color: oklch(0.82 0.12 199)">WORK · [YEAR]</span><span>001</span>
+      <div style="font-size: 13px; color: #4d5a68; margin-bottom: 22px">// experience.years = 1</div>
+
+      <h1 style="margin: 0 0 24px; font-size: 58px; line-height: 1.12; font-weight: 700; letter-spacing: -0.03em; color: #eaf0f7; max-width: 900px">
+        <span style="color: {{accent}}">const</span> engineer = <span style="color: #e0a45c">&quot;shipping&nbsp;for&nbsp;a&nbsp;year&quot;</span>;
+      </h1>
+      <p style="margin: 0 0 36px; max-width: 660px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.7; color: #8797a8">Natchaphon Thanakaew — full-stack developer in Chiang Mai. Twelve months writing production code at <span style="color: {{accent}}">[COMPANY]</span>, after a Computer Engineering degree at RMUTL.</p>
+
+      <div style="display: flex; gap: 12px; margin-bottom: 64px">
+        <a href="#work" style="display: flex; align-items: center; gap: 9px; padding: 14px 22px; background: {{accent}}; color: #0e1116; font-size: 13px; font-weight: 500; border-radius: 4px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"></path></svg>
+          run work.list()
+        </a>
+        <a href="#contact" style="padding: 14px 22px; border: 1px solid #2a3542; font-size: 13px; border-radius: 4px; color: #8797a8">./contact.sh</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #1e252e; border-radius: 6px; overflow: hidden; margin-bottom: 76px">
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">years_shipping</div>
+          <div style="font-size: 24px; color: {{accent}}; font-weight: 500">1</div>
+        </div>
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">projects.length</div>
+          <div style="font-size: 24px; color: {{accent}}; font-weight: 500">{{total}}</div>
+        </div>
+        <div style="padding: 20px 22px; border-right: 1px solid #1e252e">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">languages</div>
+          <div style="font-size: 24px; color: {{accent}}; font-weight: 500">8</div>
+        </div>
+        <div style="padding: 20px 22px">
+          <div style="font-size: 11px; color: #4d5a68; margin-bottom: 8px">location</div>
+          <div style="font-size: 24px; color: {{accent}}; font-weight: 500">TH</div>
+        </div>
+      </div>
+
+      <div id="about" style="margin-bottom: 76px">
+        <div style="font-size: 13px; color: #4d5a68; margin-bottom: 18px">// about.md</div>
+        <div style="border-left: 2px solid #1e252e; padding-left: 26px; max-width: 760px">
+          <p style="margin: 0 0 16px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.8; color: #a8b6c5">I spent the last year building software that real people use — backends and APIs, the interfaces on top of them, and the deployment story in between. Most of that work is in <span style="color: #eaf0f7">[YOUR MAIN STACK]</span> at <span style="color: #eaf0f7">[COMPANY]</span>.</p>
+          <p style="margin: 0 0 16px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.8; color: #a8b6c5">[One or two sentences on what you are actually good at now that you weren't a year ago — the thing you'd want an interviewer to ask about.]</p>
+          <p style="margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.8; color: #6b7a8d">Before that: Computer Engineering at Rajamangala University of Technology Lanna, Chiang Mai.</p>
+        </div>
+      </div>
+
+      <div id="work" style="margin-bottom: 76px">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 500; color: #eaf0f7">~/work <span style="color: #4d5a68; font-weight: 400">&mdash; {{shown}} of {{total}}</span></h2>
+          <div style="display: flex; gap: 8px">
+            <sc-for list="{{chips}}" as="chip" hint-placeholder-count="3">
+              <span class="tm-chip" onClick="{{ chip.pick }}" style="{{ chip.style }}">{{chip.label}}</span>
+            </sc-for>
           </div>
-          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 500; letter-spacing: -0.01em">[PROJECT NAME]</h3>
-          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: rgba(232,234,237,0.6)">[What you built and who it was for — one or two sentences.]</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 7px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">[TECH]</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">[TECH]</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 200px 110px 92px; gap: 20px; padding: 10px 16px; font-size: 11px; color: #4d5a68; border-bottom: 1px solid #1e252e">
+          <span>NAME</span><span>STACK</span><span>TYPE</span><span style="text-align: right">LINK</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{items}}" as="item" hint-placeholder-count="6">
+            <div class="tm-row" style="display: grid; grid-template-columns: 1fr 200px 110px 92px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24">
+              <div>
+                <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">{{item.name}}</div>
+                <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">{{item.desc}}</div>
+              </div>
+              <div style="font-size: 12px; color: #8797a8">{{item.stack}}</div>
+              <div><span style="{{ item.badge }}">{{item.type}}</span></div>
+              <div style="text-align: right">
+                <a href="{{item.href}}" style="font-size: 12px; color: {{accent}}">{{item.link}}</a>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div id="stack" style="margin-bottom: 76px">
+        <div style="font-size: 13px; color: #4d5a68; margin-bottom: 18px">// stack.yml</div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px">
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">languages:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">HTML5<br>CSS3<br>JavaScript<br>PHP<br>C#<br>C++<br>Python<br>Dart</div>
+          </div>
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">frameworks:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">Node.js<br>Express.js<br>Flutter<br>ASP.NET</div>
+          </div>
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">databases:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">MongoDB<br>PostgreSQL</div>
+          </div>
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">tools:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">Docker<br>Git<br>Postman<br>Unity</div>
+          </div>
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">platforms:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">Linux<br>Windows</div>
+          </div>
+          <div class="tm-skill" style="border: 1px solid #1e252e; border-radius: 6px; padding: 20px">
+            <div style="font-size: 12px; color: {{accent}}; margin-bottom: 12px">learning:</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #8797a8">[WHAT YOU'RE<br>PICKING UP NOW]</div>
           </div>
         </div>
       </div>
 
-      <div class="mc-card" style="border: 1px solid rgba(232,234,237,0.12); background: rgba(232,234,237,0.02); border-radius: 4px; overflow: hidden">
-        <div style="height: 182px; background: linear-gradient(135deg, oklch(0.42 0.08 199 / 0.5), rgba(232,234,237,0.03)); border-bottom: 1px solid rgba(232,234,237,0.1)"></div>
-        <div style="padding: 24px">
-          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: rgba(232,234,237,0.42); margin-bottom: 14px">
-            <span style="color: oklch(0.82 0.12 199)">WORK · [YEAR]</span><span>002</span>
+      <div id="contact" style="padding-bottom: 72px">
+        <div style="font-size: 13px; color: #4d5a68; margin-bottom: 18px">// contact.sh</div>
+        <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 40px">
+          <div>
+            <div style="font-size: 20px; color: #eaf0f7; margin-bottom: 10px">Open to work &mdash; let's talk.</div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; color: #6b7a8d">Natchaphon11th@gmail.com</div>
           </div>
-          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 500; letter-spacing: -0.01em">[PROJECT NAME]</h3>
-          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: rgba(232,234,237,0.6)">[What you built and who it was for — one or two sentences.]</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 7px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">[TECH]</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">[TECH]</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mc-card" style="border: 1px solid rgba(232,234,237,0.12); background: rgba(232,234,237,0.02); border-radius: 4px; overflow: hidden">
-        <div style="height: 182px; background: linear-gradient(135deg, rgba(232,234,237,0.09), rgba(232,234,237,0.02)); border-bottom: 1px solid rgba(232,234,237,0.1)"></div>
-        <div style="padding: 24px">
-          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: rgba(232,234,237,0.42); margin-bottom: 14px">
-            <span>STUDY · [YEAR]</span><span>003</span>
-          </div>
-          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 500; letter-spacing: -0.01em">E-sports Stress Analysis</h3>
-          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: rgba(232,234,237,0.6)">Backend and analytics for real-time hardware input, with a companion mobile app for stress tracking.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 7px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">Python</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">Flutter</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">MongoDB</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mc-card" style="border: 1px solid rgba(232,234,237,0.12); background: rgba(232,234,237,0.02); border-radius: 4px; overflow: hidden">
-        <div style="height: 182px; background: linear-gradient(135deg, rgba(232,234,237,0.09), rgba(232,234,237,0.02)); border-bottom: 1px solid rgba(232,234,237,0.1)"></div>
-        <div style="padding: 24px">
-          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: rgba(232,234,237,0.42); margin-bottom: 14px">
-            <span>STUDY · [YEAR]</span><span>004</span>
-          </div>
-          <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 500; letter-spacing: -0.01em">Inventory Management System</h3>
-          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: rgba(232,234,237,0.6)">A warehouse system handling inbound and outbound inventory transactions with role-based access.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 7px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">C#</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 3px; background: rgba(232,234,237,0.06); color: rgba(232,234,237,0.7)">ASP.NET</span>
+          <div style="display: flex; gap: 10px">
+            <a class="tm-social" href="https://github.com/pammytv2" style="display: flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              github
+            </a>
+            <a class="tm-social" href="[YOUR LINKEDIN URL]" style="display: flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              linkedin
+            </a>
+            <a class="tm-social" href="mailto:Natchaphon11th@gmail.com" style="display: flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+              email
+            </a>
           </div>
         </div>
       </div>
 
     </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 18px; height: 30px; background: {{accent}}; color: #0e1116; font-size: 11px; font-weight: 500">
+    <span>main*  &nbsp;&middot;&nbsp;  natchaphon.dev</span>
+    <span>&copy; 2026 Natchaphon Thanakaew  &nbsp;&middot;&nbsp;  UTF-8</span>
   </div>
 </div>
 </x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#3fd77f","options":["#3fd77f","#58a6ff","#e0a45c","#f778ba"],"section":"Theme"},"$preview":{"width":1200,"height":3200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'all' };
+  }
+
+  data() {
+    return [
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: 'esports-stress-analysis', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Node, Mongo', type: 'study', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
+      { name: 'role-based-product-api', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', type: 'study', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
+      { name: 'game-driving-simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', type: 'study', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
+    ];
+  }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#3fd77f';
+    const all = this.data();
+    const filter = this.state.filter;
+    const items = filter === 'all' ? all : all.filter((x) => x.type === filter);
+
+    const badgeBase = 'font-size: 11px; padding: 4px 9px; border-radius: 3px; ';
+    const rows = items.map((x) => ({
+      ...x,
+      badge: x.type === 'work'
+        ? badgeBase + 'background: ' + accent + '24; color: ' + accent
+        : badgeBase + 'background: #1e252e; color: #8797a8'
+    }));
+
+    const chipBase = 'display: inline-block; font-size: 12px; padding: 7px 14px; border-radius: 4px; border: 1px solid ';
+    const chips = ['all', 'work', 'study'].map((id) => ({
+      id: id,
+      label: '--' + id,
+      style: id === filter
+        ? chipBase + accent + '; color: ' + accent + '; background: ' + accent + '14'
+        : chipBase + '#2a3542; color: #5d6b7c',
+      pick: () => this.setState({ filter: id })
+    }));
+
+    const lines = [];
+    for (let i = 1; i <= 150; i++) { lines.push(i); }
+
+    return {
+      accent: accent,
+      chips: chips,
+      items: rows,
+      lines: lines,
+      shown: rows.length,
+      total: all.length
+    };
+  }
+}
+</script>
 </body>
 </html>

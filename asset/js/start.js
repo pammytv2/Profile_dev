@@ -1,103 +1,130 @@
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    // ป้องกันคลาสค้าง
-    link.classList.remove("animate-click");
-    void link.offsetWidth; // รีเซ็ต animation
-    link.classList.add("animate-click");
-    // ปิดเมนูเมื่อคลิกบนมือถือเพื่อไม่ให้บังเนื้อหา
-    const menuToggle = document.getElementById("menu-toggle");
-    if (menuToggle) {
-      menuToggle.checked = false;
+/* Natchaphon Thanakaew — portfolio
+   Three small jobs: the work filter, the mobile menu, and the decorative
+   line-number gutter. Everything degrades gracefully without JS: all rows
+   render, the nav anchors still work, the gutter is simply empty. */
+
+(function () {
+  "use strict";
+
+  /* --- work filter ------------------------------------------------------- */
+
+  function initFilter() {
+    var list = document.querySelector("[data-list]");
+    var chips = document.querySelectorAll(".chip[data-filter]");
+    if (!list || !chips.length) return;
+
+    var rows = Array.prototype.slice.call(list.querySelectorAll(".row"));
+    var shownEls = document.querySelectorAll("[data-shown]");
+    var totalEls = document.querySelectorAll("[data-total]");
+
+    var empty = document.createElement("li");
+    empty.className = "empty";
+    empty.hidden = true;
+    empty.textContent = "No entries match that filter.";
+    list.appendChild(empty);
+
+    function setText(nodes, value) {
+      Array.prototype.forEach.call(nodes, function (n) { n.textContent = value; });
     }
-  });
-});
-      // Create twinkling stars
-      // สร้างดาวกระพริบแบบสุ่ม
-      function createStars() {
-        const starsContainer = document.querySelector(".stars-layer");
-        const starCount = 300;
 
-        for (let i = 0; i < starCount; i++) {
-          const star = document.createElement("div");
-          star.className = "star";
+    setText(totalEls, String(rows.length));
 
-          // ขนาดสุ่มของดาว
-          const size = Math.random();
-          if (size < 0.7) {
-            star.classList.add("small");
-          } else if (size < 0.9) {
-            star.classList.add("medium");
-          } else {
-            star.classList.add("large");
-          }
+    function apply(filter) {
+      var shown = 0;
 
-          // ตำแหน่งและเอฟเฟกต์สุ่ม
-          star.style.left = Math.random() * 100 + "%";
-          star.style.top = Math.random() * 100 + "%";
-          star.style.animationDelay = Math.random() * 3 + "s";
-          star.style.animationDuration = Math.random() * 2 + 2 + "s";
-
-          starsContainer.appendChild(star);
-        }
-      }
-      // ตรวจว่า element อยู่ใน viewport ไหม
-      function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top <=
-          (window.innerHeight || document.documentElement.clientHeight)
-        );
-      }
-      function revealSectionsOnScroll() {
-        const sections = document.querySelectorAll(".section");
-        const windowHeight = window.innerHeight;
-
-        sections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= windowHeight - 100) {
-            section.classList.add("visible");
-          }
-        });
-      }
-
-      function revealSectionsOnScroll() {
-        const sections = document.querySelectorAll(".section");
-        sections.forEach((section) => {
-          if (isInViewport(section)) {
-            section.classList.add("visible");
-          }
-        });
-      }
-
-      // Run เมื่อ scroll และเมื่อโหลด
-      window.addEventListener("scroll", revealSectionsOnScroll);
-      window.addEventListener("DOMContentLoaded", revealSectionsOnScroll);
-
-      // สร้างดาวตกแบบสุ่ม
-      function createShootingStars() {
-        setInterval(() => {
-          const shootingStar = document.createElement("div");
-          shootingStar.className = "shooting-star";
-
-          shootingStar.style.left = Math.random() * 50 + "%";
-          shootingStar.style.top = Math.random() * 50 + "%";
-          shootingStar.style.width = Math.random() * 150 + 100 + "px";
-          shootingStar.style.animationDuration = Math.random() * 1 + 1.5 + "s";
-
-          document.body.appendChild(shootingStar);
-
-          // ลบดาวตกหลังจากจบ animation
-          setTimeout(() => {
-            if (document.body.contains(shootingStar)) {
-              document.body.removeChild(shootingStar);
-            }
-          }, 2000); // กำหนดให้อยู่แค่ 2 วินาที
-        }, 4000); // สร้างใหม่ทุก 4 วินาที
-      }
-      
-
-      // เรียกใช้งานเมื่อโหลดหน้าเว็บ
-      window.addEventListener("DOMContentLoaded", () => {
-        createStars();
-        createShootingStars();
+      rows.forEach(function (row) {
+        var match = filter === "all" || row.getAttribute("data-type") === filter;
+        row.hidden = !match;
+        if (match) shown++;
       });
+
+      empty.hidden = shown !== 0;
+      setText(shownEls, String(shown));
+
+      Array.prototype.forEach.call(chips, function (chip) {
+        var on = chip.getAttribute("data-filter") === filter;
+        chip.classList.toggle("chip--on", on);
+        chip.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+
+    Array.prototype.forEach.call(chips, function (chip) {
+      chip.addEventListener("click", function () {
+        apply(chip.getAttribute("data-filter"));
+      });
+    });
+
+    apply("all");
+  }
+
+  /* --- mobile menu ------------------------------------------------------- */
+
+  function initMenu() {
+    var btn = document.querySelector(".menu-btn");
+    var nav = document.getElementById("tabs-mobile");
+    if (!btn || !nav) return;
+
+    function close() {
+      nav.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    btn.addEventListener("click", function () {
+      var open = nav.hidden;
+      nav.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    nav.addEventListener("click", function (event) {
+      if (event.target.tagName === "A") close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") close();
+    });
+  }
+
+  /* --- line-number gutter ------------------------------------------------ */
+
+  function initGutter() {
+    var nums = document.querySelector(".gutter__nums");
+    var gutter = document.querySelector(".gutter");
+    if (!nums || !gutter) return;
+
+    var LINE_HEIGHT = 25.2; /* 12px * 2.1 */
+    var TOP_OFFSET = 40;
+    var rendered = 0;
+
+    function paint() {
+      if (getComputedStyle(gutter).display === "none") return;
+
+      var needed = Math.ceil((gutter.offsetHeight - TOP_OFFSET) / LINE_HEIGHT) + 2;
+      if (needed === rendered) return;
+
+      var out = [];
+      for (var i = 1; i <= needed; i++) out.push("<div>" + i + "</div>");
+      nums.innerHTML = out.join("");
+      rendered = needed;
+    }
+
+    paint();
+
+    if (typeof ResizeObserver === "function") {
+      new ResizeObserver(paint).observe(gutter);
+    } else {
+      window.addEventListener("resize", paint);
+    }
+  }
+
+  function init() {
+    initFilter();
+    initMenu();
+    initGutter();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

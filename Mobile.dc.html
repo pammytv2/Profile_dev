@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #0e1116; }
+    a { color: #c9d4e2; text-decoration: none; }
+    a:hover { color: #eaf0f7; }
+    .tm-chip { cursor: pointer; transition: all 0.3s ease; }
+  </style>
+</helmet>
+
+<div style="width: 390px; background: #0e1116; color: #c9d4e2; font-family: 'JetBrains Mono', ui-monospace, monospace; overflow: hidden">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 52px; background: #090c10; border-bottom: 1px solid #1e252e">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+      index.tsx
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8797a8" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </div>
+  </div>
+
+  <div style="padding: 32px 20px 0">
+
+    <div style="font-size: 12px; color: #4d5a68; margin-bottom: 18px">// experience.years = 1</div>
+
+    <h1 style="margin: 0 0 20px; font-size: 32px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; color: #eaf0f7">
+      <span style="color: {{accent}}">const</span> engineer =<br><span style="color: #e0a45c">&quot;shipping&nbsp;for<br>a&nbsp;year&quot;</span>;
+    </h1>
+    <p style="margin: 0 0 28px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.7; color: #8797a8">Natchaphon Thanakaew — full-stack developer in Chiang Mai. Twelve months writing production code at <span style="color: {{accent}}">[COMPANY]</span>.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 44px">
+      <a href="#work" style="display: flex; align-items: center; justify-content: center; gap: 9px; height: 48px; background: {{accent}}; color: #0e1116; font-size: 14px; font-weight: 500; border-radius: 4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"></path></svg>
+        run work.list()
+      </a>
+      <a href="#contact" style="display: flex; align-items: center; justify-content: center; height: 48px; border: 1px solid #2a3542; font-size: 14px; border-radius: 4px; color: #8797a8">./contact.sh</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #1e252e; border-radius: 6px; overflow: hidden; margin-bottom: 44px">
+      <div style="padding: 16px 18px; border-right: 1px solid #1e252e; border-bottom: 1px solid #1e252e">
+        <div style="font-size: 11px; color: #4d5a68; margin-bottom: 7px">years_shipping</div>
+        <div style="font-size: 21px; color: {{accent}}; font-weight: 500">1</div>
+      </div>
+      <div style="padding: 16px 18px; border-bottom: 1px solid #1e252e">
+        <div style="font-size: 11px; color: #4d5a68; margin-bottom: 7px">projects</div>
+        <div style="font-size: 21px; color: {{accent}}; font-weight: 500">{{total}}</div>
+      </div>
+      <div style="padding: 16px 18px; border-right: 1px solid #1e252e">
+        <div style="font-size: 11px; color: #4d5a68; margin-bottom: 7px">languages</div>
+        <div style="font-size: 21px; color: {{accent}}; font-weight: 500">8</div>
+      </div>
+      <div style="padding: 16px 18px">
+        <div style="font-size: 11px; color: #4d5a68; margin-bottom: 7px">location</div>
+        <div style="font-size: 21px; color: {{accent}}; font-weight: 500">TH</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 44px">
+      <div style="font-size: 12px; color: #4d5a68; margin-bottom: 14px">// about.md</div>
+      <div style="border-left: 2px solid #1e252e; padding-left: 18px">
+        <p style="margin: 0 0 14px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.75; color: #a8b6c5">I spent the last year building software that real people use — backends and APIs, the interfaces on top of them, and the deployment story in between. Most of that work is in <span style="color: #eaf0f7">[YOUR MAIN STACK]</span>.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.75; color: #6b7a8d">Before that: Computer Engineering at RMUTL, Chiang Mai.</p>
+      </div>
+    </div>
+
+    <div id="work" style="margin-bottom: 44px">
+      <h2 style="margin: 0 0 14px; font-size: 14px; font-weight: 500; color: #eaf0f7">~/work <span style="color: #4d5a68; font-weight: 400">&mdash; {{shown}} of {{total}}</span></h2>
+
+      <div style="display: flex; gap: 8px; margin-bottom: 18px">
+        <sc-for list="{{chips}}" as="chip" hint-placeholder-count="3">
+          <span class="tm-chip" onClick="{{ chip.pick }}" style="{{ chip.style }}">{{chip.label}}</span>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <sc-for list="{{items}}" as="item" hint-placeholder-count="6">
+          <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 18px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px">
+              <span style="font-size: 14px; color: #eaf0f7">{{item.name}}</span>
+              <span style="{{ item.badge }}">{{item.type}}</span>
+            </div>
+            <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; color: #6b7a8d; line-height: 1.6; margin-bottom: 14px">{{item.desc}}</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+              <span style="font-size: 12px; color: #8797a8">{{item.stack}}</span>
+              <a href="{{item.href}}" style="display: flex; align-items: center; gap: 6px; height: 44px; padding: 0 4px; font-size: 12px; color: {{accent}}">{{item.link}}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 44px">
+      <div style="font-size: 12px; color: #4d5a68; margin-bottom: 14px">// stack.yml</div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
+          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">languages:</div>
+          <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">HTML5, CSS3, JavaScript, PHP, C#, C++, Python, Dart</div>
+        </div>
+        <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
+          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">frameworks:</div>
+          <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">Node.js, Express.js, Flutter, ASP.NET</div>
+        </div>
+        <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
+          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">databases:</div>
+          <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">MongoDB, PostgreSQL</div>
+        </div>
+        <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 16px 18px">
+          <div style="font-size: 12px; color: {{accent}}; margin-bottom: 8px">tools:</div>
+          <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.7; color: #8797a8">Docker, Git, Postman, Unity</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" style="padding-bottom: 40px">
+      <div style="font-size: 12px; color: #4d5a68; margin-bottom: 14px">// contact.sh</div>
+      <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 22px">
+        <div style="font-size: 17px; color: #eaf0f7; margin-bottom: 8px">Open to work.</div>
+        <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; color: #6b7a8d; margin-bottom: 18px">Natchaphon11th@gmail.com</div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <a href="https://github.com/pammytv2" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            github.com/pammytv2
+          </a>
+          <a href="[YOUR LINKEDIN URL]" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            [YOUR LINKEDIN]
+          </a>
+          <a href="mailto:Natchaphon11th@gmail.com" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #1e252e; border-radius: 4px; font-size: 13px; color: #8797a8">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+            email
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: center; height: 30px; background: {{accent}}; color: #0e1116; font-size: 11px; font-weight: 500">
+    &copy; 2026 Natchaphon Thanakaew
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#3fd77f","options":["#3fd77f","#58a6ff","#e0a45c","#f778ba"],"section":"Theme"},"$preview":{"width":390,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'all' };
+  }
+
+  data() {
+    return [
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
+      { name: 'esports-stress-analysis', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Mongo', type: 'study', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
+      { name: 'role-based-product-api', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', type: 'study', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
+      { name: 'game-driving-simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', type: 'study', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
+    ];
+  }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#3fd77f';
+    const all = this.data();
+    const filter = this.state.filter;
+    const items = filter === 'all' ? all : all.filter((x) => x.type === filter);
+
+    const badgeBase = 'font-size: 11px; padding: 4px 9px; border-radius: 3px; white-space: nowrap; ';
+    const rows = items.map((x) => ({
+      ...x,
+      badge: x.type === 'work'
+        ? badgeBase + 'background: ' + accent + '24; color: ' + accent
+        : badgeBase + 'background: #1e252e; color: #8797a8'
+    }));
+
+    const chipBase = 'display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 18px; font-size: 13px; border-radius: 4px; border: 1px solid ';
+    const chips = ['all', 'work', 'study'].map((id) => ({
+      id: id,
+      label: '--' + id,
+      style: id === filter
+        ? chipBase + accent + '; color: ' + accent + '; background: ' + accent + '14'
+        : chipBase + '#2a3542; color: #5d6b7c',
+      pick: () => this.setState({ filter: id })
+    }));
+
+    return {
+      accent: accent,
+      chips: chips,
+      items: rows,
+      shown: rows.length,
+      total: all.length
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,38 +1,56 @@
 {
+  "pages": [
+    { "id": "page-1", "name": "Portfolio" },
+    { "id": "page-2", "name": "Directions" }
+  ],
   "artboards": [
-    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2050, "title": "A — Mission Control" },
-    { "file": "DirectionB.dc.html", "x": 1320, "y": 0, "w": 1200, "h": 2000, "title": "B — Editorial" },
-    { "file": "DirectionC.dc.html", "x": 2640, "y": 0, "w": 1200, "h": 1300, "title": "C — Terminal" }
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2750, "title": "Desktop", "page": "page-1", "is_interactive": true },
+    { "file": "Mobile.dc.html", "x": 1320, "y": 0, "w": 390, "h": 3400, "title": "Mobile — 390px", "page": "page-1", "is_interactive": true },
+    { "file": "DirectionA.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2050, "title": "A — Mission Control", "page": "page-2" },
+    { "file": "DirectionB.dc.html", "x": 1320, "y": 0, "w": 1200, "h": 2000, "title": "B — Editorial", "page": "page-2" },
+    { "file": "DirectionC.dc.html", "x": 2640, "y": 0, "w": 1200, "h": 1300, "title": "C — Terminal (sketch)", "page": "page-2" }
   ],
   "annotations": [
     {
-      "id": "brief",
+      "id": "todo",
       "x": 0,
-      "y": -760,
-      "w": 560,
-      "text": "Three directions for the portfolio overhaul — pick one and I'll build it out properly (desktop + mobile + working filters).\n\nAll three show the same two things so they're comparable: the hero with the one-year positioning, and four work entries.\n\nEverything in [BRACKETS] is a real fact I don't have yet — your company, your work projects, the project count. The two university projects are real."
+      "y": -420,
+      "w": 620,
+      "page": "page-1",
+      "text": "TERMINAL — built out. Desktop and mobile, same content, filters work: click --all / --work / --study and the list actually filters.\n\nSTILL NEEDS YOUR INPUT — everything in [BRACKETS]:\n· [COMPANY] — where you've been the last year\n· 3 x [PROJECT NAME] + [TECH] — the work projects (set to \"private\" links; say if any are public)\n· [YOUR MAIN STACK] and the second about paragraph\n· [YOUR LINKEDIN URL] — the current site still has the literal placeholder in it\n· [WHAT YOU'RE PICKING UP NOW] — the learning card\n\nThe three university projects are filled in with their real data and links."
+    },
+    {
+      "id": "note-tweak",
+      "x": 1320,
+      "y": -200,
+      "w": 390,
+      "page": "page-1",
+      "text": "The accent colour is one tweak chip above each artboard — green, blue, amber or pink. It recolours everything at once.\n\nDesktop and mobile are separate files, so change it on both."
     },
     {
       "id": "note-a",
       "x": 0,
       "y": -300,
       "w": 560,
-      "text": "A — MISSION CONTROL\n\nWhy: keeps the space identity you already have, but disciplines it. Near-black instead of pure black, a faint technical grid instead of animated rockets, monospace data labels, a telemetry strip. Familiar, but it stops looking like a student site.\n\nTradeoff: it's still a themed site. Some recruiters read \"space\" as a gimmick no matter how well it's done."
+      "page": "page-2",
+      "text": "A — MISSION CONTROL (not chosen)\n\nKept the space identity but disciplined it: near-black, a faint technical grid, monospace data labels, a telemetry strip."
     },
     {
       "id": "note-b",
       "x": 1320,
       "y": -300,
       "w": 560,
-      "text": "B — EDITORIAL\n\nWhy: warm paper, serif headlines, projects as big numbered entries with room to actually explain them. Reads calm and senior — this is what a portfolio looks like when the work speaks for itself.\n\nTradeoff: throws the current identity away completely. A light theme is the biggest possible break from the site you have now."
+      "page": "page-2",
+      "text": "B — EDITORIAL (not chosen)\n\nWarm paper, serif headlines, work as big numbered entries with room to explain them."
     },
     {
       "id": "note-c",
       "x": 2640,
       "y": -300,
       "w": 560,
-      "text": "C — TERMINAL\n\nWhy: monospace-first, IDE chrome, work as a sortable file listing. Dense and confident — signals \"I write code\" before you read a single word.\n\nTradeoff: speaks fluently to engineers, less so to HR screeners and non-technical recruiters, who are often the first people to open your link."
+      "page": "page-2",
+      "text": "C — TERMINAL (chosen)\n\nThis is the original sketch, kept for reference. The built-out version is on the Portfolio page."
     }
   ],
-  "launch": { "view": "canvas" }
+  "launch": { "view": "canvas", "page": "page-1" }
 }

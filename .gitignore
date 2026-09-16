@@ -1,3 +1,6 @@
 # Generated design canvas (2.4 MB editor payload).
 # Rebuild from the .dc.html artboards + canvas.json with the /design skill.
 natchaphon-portfolio.html
+
+# Local dev server config
+.claude/launch.json

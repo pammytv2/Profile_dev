@@ -1,258 +1,237 @@
 <!DOCTYPE html>
-<html lang="th">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natchaphon Thanakaew — Full-stack Developer</title>
+  <meta name="description" content="Full-stack developer in Chiang Mai. One year shipping production web and mobile software." />
+  <meta name="theme-color" content="#0e1116" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="asset/css/style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🚀Profile DEV - Developer </title>
 </head>
-
 <body>
-  <!-- Space Background -->
-  <div class="space-bg"></div>
-  <div class="stars-layer"></div>
-  <div class="moon"></div>
-  <div class="rocket"></div>
-  <div class="rocket"></div>
-  <div class="rocket"></div>
-  <div class="planet planet-1"></div>
-  <div class="planet planet-2"></div>
 
-  <!-- Navigation -->
-  <nav class="menu-bar">
-    <div class="nav-content">
-      <div class="logo">🚀 Profile.DEV</div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <ul class="nav-links">
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#about">👨‍🚀 About</a></li>
-        <li><a href="#skills">⚡ Skills</a></li>
-        <li><a href="#projects">🛸 Projects</a></li> <!-- หรือ Space Missions -->
-        <li><a href="#contact">📡 Contact</a></li>
-      </ul>
+  <header class="titlebar">
+    <div class="titlebar__dots" aria-hidden="true">
+      <span></span><span></span><span></span>
     </div>
+    <nav class="tabs" aria-label="Sections">
+      <span class="tab tab--active">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+        index.tsx
+      </span>
+      <a class="tab" href="#work">work.json</a>
+      <a class="tab" href="#about">about.md</a>
+      <a class="tab" href="#stack">stack.yml</a>
+      <a class="tab" href="#contact">contact.sh</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="tabs-mobile" aria-label="Toggle menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
+  </header>
+
+  <nav class="tabs-mobile" id="tabs-mobile" aria-label="Sections" hidden>
+    <a href="#work">work.json</a>
+    <a href="#about">about.md</a>
+    <a href="#stack">stack.yml</a>
+    <a href="#contact">contact.sh</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1> Natchaphon Thanakaew</h1>
-      <p class="subtitle" style="
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 0 1rem;
-  word-break: break-word;
-">
-  A newly graduated Full-Stack Developer 🎓<br />
-  Passionate about building modern and efficient web applications<br />
-  Ready to embark on a developer journey with an open mind and big dreams 🚀
-</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">🚀 View Projects</a>
-        <a href="#contact" class="btn">📡 Contact from Space</a>
-      </div>
-    </div>
-  </section>
+  <div class="shell">
+    <div class="gutter" aria-hidden="true"><div class="gutter__nums"></div></div>
 
-  <!-- About Section -->
-<section id="about" class="section">
-  <h2 style="
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);">
-    🌟 Digital Explorer
-  </h2>
+    <main class="content">
 
-  <div style="
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    font-size: 1.15rem;
-    line-height: 2;
-    color: rgba(255, 255, 255, 0.85);
-    background: rgba(255, 255, 255, 0.03);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);">
-    
-    <p style="margin-bottom: 1.5rem;">
-      I am a recent graduate in Computer Engineering from Rajamangala University of Technology Lanna, Chiang Mai.
-    </p>
-
-    <p style="margin-bottom: 1.5rem;">
-      My academic journey has cultivated a strong foundation in web development, software engineering, and system design.
-      I’ve also gained hands-on experience through real-world projects that combine both Frontend and Backend technologies.
-    </p>
-
-    <p>
-      With a passion for learning and problem-solving, I am eager to apply my skills to build creative, efficient, and impactful solutions in the digital space.
-    </p>
-  </div>
-</section>
-
-
-
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>⚡ Technical Skills</h2>
-    <div class="skills-grid">
-
-      <!-- Programming Languages -->
-      <div class="skill-card">
-        <div class="skill-icon">💻</div>
-        <h3>Programming Languages</h3>
-        <p>
-          HTML5 🧱 CSS3 🎨 PHP 🐘 JavaScript ⚡ C# 🧩<br />
-          C++ 💡 Python 🐍 Dart 🎯
-
+      <section class="hero">
+        <p class="comment">// experience.years = 1</p>
+        <h1 class="hero__title">
+          <span class="kw">const</span> engineer = <span class="str">&quot;shipping for a year&quot;</span>;
+        </h1>
+        <p class="hero__lede">
+          Natchaphon Thanakaew — full-stack developer in Chiang Mai. Twelve months writing
+          production code at <span class="hl">[COMPANY]</span>, after a Computer Engineering
+          degree at RMUTL.
         </p>
-      </div>
-
-      <!-- Frameworks -->
-      <div class="skill-card">
-        <div class="skill-icon">🧰</div>
-        <h3>Frameworks & Libraries</h3>
-        <p>
-          Node.js 🟢 Express.js 🚂 Flutter 🔷 ASP.NET 🛠️
-        </p>
-      </div>
-
-      <!-- Databases -->
-      <div class="skill-card">
-        <div class="skill-icon">🗄️</div>
-        <h3>Databases</h3>
-        <p>
-          MongoDB 🍃 PostgreSQL 🐘
-        </p>
-      </div>
-
-      <!-- Tools -->
-      <div class="skill-card">
-        <div class="skill-icon">🛠️</div>
-        <h3>Tools & Utilities</h3>
-        <p>
-          Docker 🐳 Git 🔧 Postman 📬 Unity 🎮
-        </p>
-      </div>
-
-      <!-- Platforms -->
-      <div class="skill-card">
-        <div class="skill-icon">🖥️</div>
-        <h3>Platforms</h3>
-        <p>
-          Linux 🐧 Windows 🖥️
-        </p>
-      </div>
-
-    </div>
-  </section>
-
- <!-- Projects Section -->
-<section id="projects" class="section">
-  <h2>🛸 Projects & Accomplishments</h2>
-  <div class="projects-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="asset/img/1.png" alt="VR Driving Simulator" style="width: 100%; height: 200px; object-fit: cover;" />
-      </div>
-      <div class="project-content">
-        <h3>Driving Simulation Using VR Technology</h3>
-        <p>
-          A VR-based driving game designed to help users practice driving in a safe, virtual environment.
-        </p>
-        <p><strong>🚀 Tech:</strong> C#, Unity</p>
-        <p>
-          <strong>🛠️ Git:</strong>
-          <a href="https://github.com/pammytv2/Game_driving_smiulator" target="_blank" style="color: #fff; text-decoration: underline;">
-            🔗 View GitHub
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"></path></svg>
+            run work.list()
           </a>
-        </p>
-      </div>
-    </div>
+          <a class="btn" href="#contact">./contact.sh</a>
+        </div>
+      </section>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="asset/img/2.png" alt="E-sports Stress Tool" style="width: 100%; height: 200px; object-fit: cover;" />
-      </div>
-      <div class="project-content">
-        <h3>Stress Analysis Tool for E-sports Players</h3>
-        <p>
-          Backend and analytics system with real-time hardware input, visualized through interactive graphs.
-          Includes a mobile app for stress tracking.
-        </p>
-        <p><strong>🚀 Tech:</strong> Python, Flutter, Node.js, MongoDB</p>
-        <p>
-          <strong>🌐 Web:</strong>
-          <a href="https://esc.camt.cmu.ac.th" target="_blank" style="color: #fff; text-decoration: underline;">
-            🔗 View Wedsite
-          </a>
-        </p>
-      </div>
-    </div>
+      <section class="stats" aria-label="At a glance">
+        <div class="stat">
+          <span class="stat__key">years_shipping</span>
+          <span class="stat__val">1</span>
+        </div>
+        <div class="stat">
+          <span class="stat__key">projects.length</span>
+          <span class="stat__val" data-total>6</span>
+        </div>
+        <div class="stat">
+          <span class="stat__key">languages</span>
+          <span class="stat__val">8</span>
+        </div>
+        <div class="stat">
+          <span class="stat__key">location</span>
+          <span class="stat__val">TH</span>
+        </div>
+      </section>
 
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="asset/img/3.png" alt="Inventory Management System" style="width: 100%; height: 200px; object-fit: cover;" />
-      </div>
-      <div class="project-content">
-        <h3>Inventory Management System (IMS)</h3>
-        <p>
-          A warehouse system for managing inbound and outbound inventory transactions.
-        </p>
-        <p><strong>🚀 Tech:</strong> C#, ASP.NET</p>
-        <p>
-          <strong>🛠️ Git:</strong>
-          <a href="https://github.com/pammytv2/RoleBasedProductAPI" target="_blank" style="color: #fff; text-decoration: underline;">
-            🔗 View GitHub
-          </a>
-        </p>
-      </div>
-    </div>
+      <section id="about" class="section">
+        <p class="comment">// about.md</p>
+        <div class="prose">
+          <p>
+            I spent the last year building software that real people use — backends and APIs,
+            the interfaces on top of them, and the deployment story in between. Most of that
+            work is in <span class="hl">[YOUR MAIN STACK]</span> at <span class="hl">[COMPANY]</span>.
+          </p>
+          <p>[One or two sentences on what you are good at now that you weren't a year ago.]</p>
+          <p class="prose__muted">
+            Before that: Computer Engineering at Rajamangala University of Technology Lanna,
+            Chiang Mai.
+          </p>
+        </div>
+      </section>
 
-  </div>
-</section>
+      <section id="work" class="section">
+        <div class="work__head">
+          <h2 class="section__title">~/work <span class="section__count"><span data-shown>6</span> of <span data-total>6</span></span></h2>
+          <div class="chips" role="group" aria-label="Filter work">
+            <button class="chip chip--on" type="button" data-filter="all" aria-pressed="true">--all</button>
+            <button class="chip" type="button" data-filter="work" aria-pressed="false">--work</button>
+            <button class="chip" type="button" data-filter="study" aria-pressed="false">--study</button>
+          </div>
+        </div>
 
+        <div class="table__head" aria-hidden="true">
+          <span>NAME</span><span>STACK</span><span>TYPE</span><span class="ta-r">LINK</span>
+        </div>
 
+        <ul class="table" data-list>
+          <li class="row" data-type="work">
+            <div class="row__main">
+              <span class="row__name">[PROJECT NAME]</span>
+              <span class="row__desc">[What you built, who it was for, and what changed because of it.]</span>
+            </div>
+            <span class="row__stack">[TECH], [TECH]</span>
+            <span><span class="badge badge--work">work</span></span>
+            <span class="row__link"><span class="muted">private</span></span>
+          </li>
+          <li class="row" data-type="work">
+            <div class="row__main">
+              <span class="row__name">[PROJECT NAME]</span>
+              <span class="row__desc">[What you built, who it was for, and what changed because of it.]</span>
+            </div>
+            <span class="row__stack">[TECH], [TECH]</span>
+            <span><span class="badge badge--work">work</span></span>
+            <span class="row__link"><span class="muted">private</span></span>
+          </li>
+          <li class="row" data-type="work">
+            <div class="row__main">
+              <span class="row__name">[PROJECT NAME]</span>
+              <span class="row__desc">[What you built, who it was for, and what changed because of it.]</span>
+            </div>
+            <span class="row__stack">[TECH], [TECH]</span>
+            <span><span class="badge badge--work">work</span></span>
+            <span class="row__link"><span class="muted">private</span></span>
+          </li>
+          <li class="row" data-type="study">
+            <div class="row__main">
+              <span class="row__name">esports-stress-analysis</span>
+              <span class="row__desc">Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.</span>
+            </div>
+            <span class="row__stack">Python, Flutter, Node, Mongo</span>
+            <span><span class="badge">study</span></span>
+            <span class="row__link"><a href="https://esc.camt.cmu.ac.th" target="_blank" rel="noopener">website</a></span>
+          </li>
+          <li class="row" data-type="study">
+            <div class="row__main">
+              <span class="row__name">role-based-product-api</span>
+              <span class="row__desc">Warehouse system for inbound and outbound inventory transactions with role-based access.</span>
+            </div>
+            <span class="row__stack">C#, ASP.NET</span>
+            <span><span class="badge">study</span></span>
+            <span class="row__link"><a href="https://github.com/pammytv2/RoleBasedProductAPI" target="_blank" rel="noopener">github</a></span>
+          </li>
+          <li class="row" data-type="study">
+            <div class="row__main">
+              <span class="row__name">game-driving-simulator</span>
+              <span class="row__desc">A VR driving game for practising behind the wheel in a safe virtual environment.</span>
+            </div>
+            <span class="row__stack">C#, Unity</span>
+            <span><span class="badge">study</span></span>
+            <span class="row__link"><a href="https://github.com/pammytv2/Game_driving_smiulator" target="_blank" rel="noopener">github</a></span>
+          </li>
+        </ul>
+      </section>
 
+      <section id="stack" class="section">
+        <p class="comment">// stack.yml</p>
+        <div class="cards">
+          <div class="card">
+            <p class="card__key">languages:</p>
+            <p class="card__val">HTML5, CSS3, JavaScript, PHP, C#, C++, Python, Dart</p>
+          </div>
+          <div class="card">
+            <p class="card__key">frameworks:</p>
+            <p class="card__val">Node.js, Express.js, Flutter, ASP.NET</p>
+          </div>
+          <div class="card">
+            <p class="card__key">databases:</p>
+            <p class="card__val">MongoDB, PostgreSQL</p>
+          </div>
+          <div class="card">
+            <p class="card__key">tools:</p>
+            <p class="card__val">Docker, Git, Postman, Unity</p>
+          </div>
+          <div class="card">
+            <p class="card__key">platforms:</p>
+            <p class="card__val">Linux, Windows</p>
+          </div>
+          <div class="card">
+            <p class="card__key">learning:</p>
+            <p class="card__val">[WHAT YOU'RE PICKING UP NOW]</p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Footer -->
-  <footer id="contact" class="footer">
-  <h2 style="text-align: center; margin-bottom: 1rem;">📡 Contact</h2>
-  <div class="social-links">
-    <a href="https://github.com/pammytv2" target="_blank" title="GitHub">🐙</a>
-    <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" title="LinkedIn">💼</a>
-    <a href="mailto:Natchaphon11th@gmail.com" title="Email">📧</a>
+      <section id="contact" class="section section--last">
+        <p class="comment">// contact.sh</p>
+        <div class="contact">
+          <div>
+            <p class="contact__title">Open to work — let's talk.</p>
+            <p class="contact__mail">Natchaphon11th@gmail.com</p>
+          </div>
+          <div class="contact__links">
+            <a class="social" href="https://github.com/pammytv2" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              github
+            </a>
+            <a class="social" href="[YOUR LINKEDIN URL]">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              linkedin
+            </a>
+            <a class="social" href="mailto:Natchaphon11th@gmail.com">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+              email
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
   </div>
 
-  <p>🌌 &copy; 2025 . Natchaphon 🌌</p>
+  <footer class="statusbar">
+    <span>main* &nbsp;·&nbsp; natchaphon.dev</span>
+    <span>© 2026 Natchaphon Thanakaew &nbsp;·&nbsp; UTF-8</span>
+  </footer>
 
-  <p style="
-    margin-top: 0.5rem;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;">
-    ⭐ Made with stardust and cosmic code ⭐
-  </p>
-</footer>
   <script src="asset/js/start.js"></script>
 </body>
 </html>
