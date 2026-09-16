@@ -342,26 +342,26 @@ ul { padding: 0; list-style: none; }
 .techs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tech {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 10px;
+  gap: 6px;
+  padding: 4px 8px;
   border: 1px solid var(--line);
   border-radius: var(--r);
   background: var(--bg-chrome);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--fg-3);
   transition: var(--ease);
 }
 .tech:hover { color: var(--fg); border-color: var(--line-strong); }
 
 .tech__icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   fill: currentColor;
   flex-shrink: 0;
 }
@@ -489,8 +489,8 @@ ul { padding: 0; list-style: none; }
 
   .cards { grid-template-columns: 1fr; gap: 10px; }
   .card { padding: 16px 18px; }
-  .tech { padding: 8px 11px; font-size: 13px; }
-  .tech__icon { width: 15px; height: 15px; }
+  .tech { padding: 5px 9px; font-size: 12px; }
+  .tech__icon { width: 14px; height: 14px; }
 
   .contact { flex-direction: column; align-items: stretch; gap: 18px; padding: 22px; }
   .contact__links { flex-direction: column; }
