@@ -1,14 +1,60 @@
 {
   "pages": [
-    { "id": "page-1", "name": "Portfolio" },
-    { "id": "page-2", "name": "Directions" }
+    {
+      "id": "page-1",
+      "name": "Portfolio"
+    },
+    {
+      "id": "page-2",
+      "name": "Directions"
+    }
   ],
   "artboards": [
-    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2750, "title": "Desktop", "page": "page-1", "is_interactive": true },
-    { "file": "Mobile.dc.html", "x": 1320, "y": 0, "w": 390, "h": 3400, "title": "Mobile — 390px", "page": "page-1", "is_interactive": true },
-    { "file": "DirectionA.dc.html", "x": 0, "y": 0, "w": 1200, "h": 2050, "title": "A — Mission Control", "page": "page-2" },
-    { "file": "DirectionB.dc.html", "x": 1320, "y": 0, "w": 1200, "h": 2000, "title": "B — Editorial", "page": "page-2" },
-    { "file": "DirectionC.dc.html", "x": 2640, "y": 0, "w": 1200, "h": 1300, "title": "C — Terminal (sketch)", "page": "page-2" }
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 2350,
+      "title": "Desktop",
+      "page": "page-1"
+    },
+    {
+      "file": "Mobile.dc.html",
+      "x": 1320,
+      "y": 0,
+      "w": 390,
+      "h": 2500,
+      "title": "Mobile — 390px",
+      "page": "page-1"
+    },
+    {
+      "file": "DirectionA.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 2050,
+      "title": "A — Mission Control",
+      "page": "page-2"
+    },
+    {
+      "file": "DirectionB.dc.html",
+      "x": 1320,
+      "y": 0,
+      "w": 1200,
+      "h": 2000,
+      "title": "B — Editorial",
+      "page": "page-2"
+    },
+    {
+      "file": "DirectionC.dc.html",
+      "x": 2640,
+      "y": 0,
+      "w": 1200,
+      "h": 1300,
+      "title": "C — Terminal (sketch)",
+      "page": "page-2"
+    }
   ],
   "annotations": [
     {
@@ -17,7 +63,7 @@
       "y": -420,
       "w": 620,
       "page": "page-1",
-      "text": "TERMINAL — built out. Desktop and mobile, same content, filters work: click --all / --work / --study and the list actually filters.\n\nSTILL NEEDS YOUR INPUT — everything in [BRACKETS]:\n· [COMPANY] — where you've been the last year\n· 3 x [PROJECT NAME] + [TECH] — the work projects (set to \"private\" links; say if any are public)\n· [YOUR MAIN STACK] and the second about paragraph\n· [YOUR LINKEDIN URL] — the current site still has the literal placeholder in it\n· [WHAT YOU'RE PICKING UP NOW] — the learning card\n\nThe three university projects are filled in with their real data and links."
+      "text": "LIVE at pammytv2.github.io/Profile_dev/\n\nWork list now shows only the three real projects. The type filter and TYPE column are gone — with one category left there was nothing to filter. Easy to add back when there are work projects.\n\nSTILL PLACEHOLDER, and visible on the live site:\n· [COMPANY] — twice, in the hero and in about\n· [YOUR MAIN STACK]\n· the second about paragraph\n· [WHAT YOU'RE PICKING UP NOW] — learning card\n· [YOUR LINKEDIN URL] — the link is dead, as it was before"
     },
     {
       "id": "note-tweak",
@@ -25,7 +71,7 @@
       "y": -200,
       "w": 390,
       "page": "page-1",
-      "text": "The accent colour is one tweak chip above each artboard — green, blue, amber or pink. It recolours everything at once.\n\nDesktop and mobile are separate files, so change it on both."
+      "text": "The accent colour is a tweak chip above each artboard — green, blue, amber or pink. Desktop and mobile are separate files, so change it on both."
     },
     {
       "id": "note-a",
@@ -52,5 +98,8 @@
       "text": "C — TERMINAL (chosen)\n\nThis is the original sketch, kept for reference. The built-out version is on the Portfolio page."
     }
   ],
-  "launch": { "view": "canvas", "page": "page-1" }
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
 }

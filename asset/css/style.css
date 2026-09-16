@@ -256,31 +256,12 @@ ul { padding: 0; list-style: none; }
   margin-bottom: 14px;
 }
 
-.chips { display: flex; gap: 8px; }
 
-.chip {
-  padding: 7px 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--r);
-  background: none;
-  font-family: inherit;
-  font-size: 12px;
-  color: var(--fg-5);
-  cursor: pointer;
-  transition: var(--ease);
-}
-.chip:hover { color: var(--fg-3); border-color: var(--fg-5); }
-
-.chip--on {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-dim);
-}
 
 .table__head,
 .row {
   display: grid;
-  grid-template-columns: 1fr 200px 110px 92px;
+  grid-template-columns: 1fr 240px 100px;
   gap: 20px;
   align-items: center;
 }
@@ -314,23 +295,7 @@ ul { padding: 0; list-style: none; }
 .row__link a { color: var(--accent); }
 .row__link a:hover { text-decoration: underline; }
 
-.badge {
-  display: inline-block;
-  padding: 4px 9px;
-  border-radius: var(--r-sm);
-  font-size: 11px;
-  background: var(--line);
-  color: var(--fg-3);
-  white-space: nowrap;
-}
-.badge--work { background: var(--accent-soft); color: var(--accent); }
 
-.empty {
-  padding: 32px 16px;
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--fg-5);
-}
 
 /* --- stack cards --------------------------------------------------------- */
 
@@ -453,9 +418,6 @@ ul { padding: 0; list-style: none; }
   .prose { padding-left: 18px; }
   .prose p { font-size: 15px; line-height: 1.75; }
 
-  .work__head { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .chips { width: 100%; }
-  .chip { flex: 1; height: 44px; font-size: 13px; }
 
   .table__head { display: none; }
 

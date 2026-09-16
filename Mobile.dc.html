@@ -14,7 +14,6 @@
     body { margin: 0; background: #0e1116; }
     a { color: #c9d4e2; text-decoration: none; }
     a:hover { color: #eaf0f7; }
-    .tm-chip { cursor: pointer; transition: all 0.3s ease; }
   </style>
 </helmet>
 
@@ -75,21 +74,12 @@
     </div>
 
     <div id="work" style="margin-bottom: 44px">
-      <h2 style="margin: 0 0 14px; font-size: 14px; font-weight: 500; color: #eaf0f7">~/work <span style="color: #4d5a68; font-weight: 400">&mdash; {{shown}} of {{total}}</span></h2>
-
-      <div style="display: flex; gap: 8px; margin-bottom: 18px">
-        <sc-for list="{{chips}}" as="chip" hint-placeholder-count="3">
-          <span class="tm-chip" onClick="{{ chip.pick }}" style="{{ chip.style }}">{{chip.label}}</span>
-        </sc-for>
-      </div>
+      <h2 style="margin: 0 0 18px; font-size: 14px; font-weight: 500; color: #eaf0f7">~/work</h2>
 
       <div style="display: flex; flex-direction: column; gap: 12px">
-        <sc-for list="{{items}}" as="item" hint-placeholder-count="6">
+        <sc-for list="{{items}}" as="item" hint-placeholder-count="3">
           <div style="border: 1px solid #1e252e; border-radius: 6px; padding: 18px">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px">
-              <span style="font-size: 14px; color: #eaf0f7">{{item.name}}</span>
-              <span style="{{ item.badge }}">{{item.type}}</span>
-            </div>
+            <div style="font-size: 14px; color: #eaf0f7; margin-bottom: 10px">{{item.name}}</div>
             <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; color: #6b7a8d; line-height: 1.6; margin-bottom: 14px">{{item.desc}}</div>
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
               <span style="font-size: 12px; color: #8797a8">{{item.stack}}</span>
@@ -156,52 +146,20 @@
 
 <script data-dc-script data-props='{"accent":{"editor":"color","default":"#3fd77f","options":["#3fd77f","#58a6ff","#e0a45c","#f778ba"],"section":"Theme"},"$preview":{"width":390,"height":2900}}'>
 class Component extends DCLogic {
-  constructor(props) {
-    super(props);
-    this.state = { filter: 'all' };
-  }
-
   data() {
     return [
-      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
-      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
-      { name: '[PROJECT NAME]', desc: '[What you built, who it was for, and what changed because of it.]', stack: '[TECH], [TECH]', type: 'work', link: 'private', href: '#' },
-      { name: 'esports-stress-analysis', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Mongo', type: 'study', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
-      { name: 'role-based-product-api', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', type: 'study', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
-      { name: 'game-driving-simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', type: 'study', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
+      { name: 'esports-stress-analysis', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Mongo', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
+      { name: 'role-based-product-api', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
+      { name: 'game-driving-simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
     ];
   }
 
   renderVals() {
-    const accent = this.props.accent ?? '#3fd77f';
-    const all = this.data();
-    const filter = this.state.filter;
-    const items = filter === 'all' ? all : all.filter((x) => x.type === filter);
-
-    const badgeBase = 'font-size: 11px; padding: 4px 9px; border-radius: 3px; white-space: nowrap; ';
-    const rows = items.map((x) => ({
-      ...x,
-      badge: x.type === 'work'
-        ? badgeBase + 'background: ' + accent + '24; color: ' + accent
-        : badgeBase + 'background: #1e252e; color: #8797a8'
-    }));
-
-    const chipBase = 'display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 18px; font-size: 13px; border-radius: 4px; border: 1px solid ';
-    const chips = ['all', 'work', 'study'].map((id) => ({
-      id: id,
-      label: '--' + id,
-      style: id === filter
-        ? chipBase + accent + '; color: ' + accent + '; background: ' + accent + '14'
-        : chipBase + '#2a3542; color: #5d6b7c',
-      pick: () => this.setState({ filter: id })
-    }));
-
+    const items = this.data();
     return {
-      accent: accent,
-      chips: chips,
-      items: rows,
-      shown: rows.length,
-      total: all.length
+      accent: this.props.accent ?? '#3fd77f',
+      items: items,
+      total: items.length
     };
   }
 }
