@@ -281,6 +281,13 @@ ul { padding: 0; list-style: none; }
 .row:hover { background: var(--surface); }
 .row[hidden] { display: none; }
 
+.row__thumb--blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg-6);
+}
+
 .row__thumb {
   width: 132px;
   height: 78px;

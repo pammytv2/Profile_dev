@@ -103,7 +103,7 @@
         <div style="display: flex; flex-direction: column">
           <sc-for list="{{items}}" as="item" hint-placeholder-count="3">
             <div class="tm-row" style="display: grid; grid-template-columns: 132px 1fr 200px 90px; gap: 20px; align-items: center; padding: 20px 16px; border-bottom: 1px solid #161c24">
-              <img src="{{item.img}}" alt="{{item.alt}}" style="width: 132px; height: 78px; object-fit: cover; border-radius: 4px; border: 1px solid #1e252e; display: block" />
+              <div style="width: 132px; height: 78px; border-radius: 4px; border: 1px solid #1e252e; background: #090c10; overflow: hidden; display: flex; align-items: center; justify-content: center"><sc-if value="{{item.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{item.img}}" alt="{{item.alt}}" style="width: 132px; height: 78px; object-fit: cover; display: block" /></sc-if><sc-if value="{{item.noImg}}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4d5a68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h5"></path></svg></sc-if></div>
               <div>
                 <div style="font-size: 15px; color: #eaf0f7; margin-bottom: 6px">{{item.name}}</div>
                 <div style="font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 13px; color: #6b7a8d; line-height: 1.55">{{item.desc}}</div>
@@ -189,6 +189,7 @@
 class Component extends DCLogic {
   data() {
     return [
+      { name: 'saraban', img: '', alt: '', desc: 'Electronic correspondence registry for schools and government offices. Register numbers stay unique under concurrent writes; routing, audit trail and permission-checked attachments.', stack: 'PHP, MySQL, Docker', link: 'github', href: 'https://github.com/pammytv2/Saraban' },
       { name: 'esports-stress-analysis', img: '2.png', alt: 'Screenshot of the e-sports stress analysis dashboard', desc: 'Backend and analytics for real-time hardware input, plus a mobile app for stress tracking.', stack: 'Python, Flutter, Node, Mongo', link: 'website', href: 'https://esc.camt.cmu.ac.th' },
       { name: 'role-based-product-api', img: '3.png', alt: 'Screenshot of the inventory management system', desc: 'Warehouse system for inbound and outbound inventory transactions with role-based access.', stack: 'C#, ASP.NET', link: 'github', href: 'https://github.com/pammytv2/RoleBasedProductAPI' },
       { name: 'game-driving-simulator', img: '1.png', alt: 'Screenshot of the VR driving simulator', desc: 'A VR driving game for practising behind the wheel in a safe virtual environment.', stack: 'C#, Unity', link: 'github', href: 'https://github.com/pammytv2/Game_driving_smiulator' }
@@ -196,7 +197,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const items = this.data();
+    const items = this.data().map((x) => ({ ...x, hasImg: !!x.img, noImg: !x.img }));
 
     const lines = [];
     for (let i = 1; i <= 150; i++) { lines.push(i); }
